@@ -1,0 +1,26 @@
+{
+    "name": "stevenwadejr/public-servant",
+    "authors": [
+        {
+            "name": "Steven Wade",
+            "email": "stevenwadejr@gmail.com"
+        },
+        {
+            "name": "Matt Cuyar"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "StevenWadeJr\\PublicServant\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StevenWadeJr\\PublicServant\\Tests\\": "tests"
+        }
+    }
+}
