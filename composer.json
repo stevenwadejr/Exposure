@@ -1,5 +1,5 @@
 {
-    "name": "stevenwadejr/public-servant",
+    "name": "stevenwadejr/exposure",
     "authors": [
         {
             "name": "Steven Wade",
@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "StevenWadeJr\\PublicServant\\": "src"
+            "StevenWadeJr\\Exposure\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "StevenWadeJr\\PublicServant\\Tests\\": "tests"
+            "StevenWadeJr\\Exposure\\Tests\\": "tests"
         }
     }
 }

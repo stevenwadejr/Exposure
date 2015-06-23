@@ -1,5 +1,5 @@
 <?php
-namespace StevenWadeJr\PublicServant\Tests;
+namespace StevenWadeJr\Exposure\Tests;
 
 class TestSubject
 {

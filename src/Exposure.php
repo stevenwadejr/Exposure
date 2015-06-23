@@ -1,9 +1,9 @@
 <?php
-namespace StevenWadeJr\PublicServant;
+namespace StevenWadeJr\Exposure;
 
 use Closure;
 
-class PublicServant
+class Exposure
 {
     protected $psClass;
 
