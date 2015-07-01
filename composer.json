@@ -1,14 +1,16 @@
 {
     "name": "stevenwadejr/exposure",
+    "description": "Exposure acts as a proxy to protected and private properties and methods on an object.",
     "authors": [
         {
             "name": "Steven Wade",
-            "email": "stevenwadejr@gmail.com"
+            "email": "stevenwadejr+opensource@gmail.com"
         },
         {
             "name": "Matt Cuyar"
         }
     ],
+    "license": "MIT",
     "require": {},
     "require-dev": {
         "phpunit/phpunit": "4.8.*@dev"
