@@ -6,6 +6,14 @@ Have you ever needed access to private/protected object properties or methods? O
 
 **Exposure** _exposes_ private and protected properties and methods as well as allowing for new methods to be added to an object _after_ instantiation.
 
+## Installation
+
+Via Composer
+
+```
+composer require stevenwadejr/exposure
+```
+
 ## Example
 
 ```php
