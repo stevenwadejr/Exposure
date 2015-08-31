@@ -14,6 +14,28 @@ Via Composer
 composer require stevenwadejr/exposure
 ```
 
+## What's new in 0.3.0?
+
+You can now expose your objects _and_ benefit from type hinting. Exposure now comes with a factory to create a new instance of `Exposure` that extends your closed class.
+
+Example:
+
+```php
+use StevenWadeJr\Exposure\Factory;
+
+class CantTouchThis
+{
+    private $privateParty = 'This is private';
+}
+
+$exposed = Factory::expose(new CantTouchThis);
+```
+
+```php
+echo $exposed->privateParty; // outputs 'This is private'
+var_dump($exposed instanceof CantTouchThis); // outputs 'true'
+```
+
 ## Example
 
 ```php
