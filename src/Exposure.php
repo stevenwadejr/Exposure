@@ -1,20 +1,20 @@
 <?php
 namespace StevenWadeJr\Exposure;
 
-use Closure;
+use \Closure;
 
 class Exposure
 {
-    protected $psClass;
+    protected $_exposureClass;
 
-    protected $psClassName;
+    protected $_exposureClassName;
 
-    protected $psMethods = [];
+    protected $_exposureMethods = [];
 
     public function __construct($class)
     {
-        $this->psClass = $class;
-        $this->psClassName = get_class($class);
+        $this->_exposureClass = $class;
+        $this->_exposureClassName = get_class($class);
     }
 
     public function __get($property)
@@ -39,8 +39,8 @@ class Exposure
 
     public function __call($method, $args)
     {
-        if (isset($this->psMethods[$method])) {
-            return call_user_func_array($this->psMethods[$method], $args);
+        if (isset($this->_exposureMethods[$method])) {
+            return call_user_func_array($this->_exposureMethods[$method], $args);
         }
         
         $closure = $this->__bind(function($method, $args)
@@ -54,20 +54,20 @@ class Exposure
     public function __methods($name = null, Closure $closure = null)
     {
         if (count(func_num_args()) === 0) {
-            return $this->psMethods;
+            return $this->_exposureMethods;
         }
 
         if (! is_null($name) && is_null($closure)) {
-            return $this->psMethods[$name];
+            return $this->_exposureMethods[$name];
         }
 
         if (! is_null($name) && ! is_null($closure)) {
-            $this->psMethods[$name] = $this->__bind($closure);
+            $this->_exposureMethods[$name] = $this->__bind($closure);
         }
     }
 
     private function __bind(Closure $closure)
     {
-        return Closure::bind($closure, $this->psClass, "\\$this->psClassName");
+        return Closure::bind($closure, $this->_exposureClass, "\\$this->_exposureClassName");
     }
 }
